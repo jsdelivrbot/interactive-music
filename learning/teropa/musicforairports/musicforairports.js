@@ -75,7 +75,7 @@ function flatToSharp(note) {
 
 // set gain to avoid distortion
 var gainNode = audioContext.createGain();
-gainNode.gain.value = 0.3;
+gainNode.gain.value = 0.1;
 
 function getSample(instrument, noteAndOctave) {
 // gets sample that matches note requested, by finding the nearest note in the SAMPLE_LIBRARY

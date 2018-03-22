@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="inspirit-jsfeat/build/jsfeat-min.js"></script>
+</head>
+
+<body>
+
+<script>
+  //core data structure for jsfeat project
+  var columns = 320, rows = 240, data_type = jsfeat.U8_t | jsfeat.C1_t;
+  //alert(typeof(jsfeat))
+  var my_matrix = new jsfeat.matrix_t(columns, rows, data_type);
+
+  var my_matrix_data = my_matrix.data;
+  console.log(my_matrix_data)
+
+  var code = jsfeat.COLOR_RGBA2GRAY;
+  jsfeat.imgproc.grayscale(my_matrix_data, columns, rows, my_matrix, code);
+
+</script>
+
+</body>
+</html>
